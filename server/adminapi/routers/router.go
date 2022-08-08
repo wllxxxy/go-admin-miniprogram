@@ -30,15 +30,15 @@ func init() {
 
 	// 后台用户
 	beego.Router("/admin/list", &controllers.AdminController{}, "get:List")
-	beego.Router("/admin/detail?:admin_id", &controllers.AdminController{}, "get:Detail")
-	beego.Router("/admin/add", &controllers.AdminController{}, "get:Add")
-	beego.Router("/admin/delete?:admin_id", &controllers.AdminController{}, "get:Delete")
-	beego.Router("/admin/edit?:admin_id", &controllers.AdminController{}, "get:Edit")
+	//beego.Router("/admin/detail?:admin_id", &controllers.AdminController{}, "get:Detail")
+	//beego.Router("/admin/add", &controllers.AdminController{}, "get:Add")
+	//beego.Router("/admin/delete?:admin_id", &controllers.AdminController{}, "get:Delete")
+	//beego.Router("/admin/edit?:admin_id", &controllers.AdminController{}, "get:Edit")
 
 	// 后台角色
 	beego.Router("/admin_role/list", &controllers.AdminController{}, "get:List")
-	beego.Router("/admin_role/detail?:role_id", &controllers.AdminController{}, "get:Detail")
-	beego.Router("/admin_role/add", &controllers.AdminController{}, "get:Add")
-	beego.Router("/admin_role/delete?:role_id", &controllers.AdminController{}, "get:Delete")
-	beego.Router("/admin_role/edit?:role_id", &controllers.AdminController{}, "get:Edit")
+	//beego.Router("/admin_role/detail?:role_id", &controllers.AdminController{}, "get:Detail")
+	//beego.Router("/admin_role/add", &controllers.AdminController{}, "get:Add")
+	//beego.Router("/admin_role/delete?:role_id", &controllers.AdminController{}, "get:Delete")
+	//beego.Router("/admin_role/edit?:role_id", &controllers.AdminController{}, "get:Edit")
 }
