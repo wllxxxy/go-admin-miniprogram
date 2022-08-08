@@ -27,4 +27,11 @@ func init() {
 		),
 	)
 	beego.AddNamespace(ns)
+
+	// 后台用户
+	beego.Router("/admin/list", &controllers.AdminController{}, "get:List")
+	beego.Router("/admin/detail?:admin_id", &controllers.AdminController{}, "get:Detail")
+	beego.Router("/admin/add", &controllers.AdminController{}, "get:Add")
+	beego.Router("/admin/delete?:admin_id", &controllers.AdminController{}, "get:Delete")
+	beego.Router("/admin/edit?:admin_id", &controllers.AdminController{}, "get:Edit")
 }
