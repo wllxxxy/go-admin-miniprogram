@@ -36,7 +36,7 @@ func init() {
 	//beego.Router("/admin/edit?:admin_id", &controllers.AdminController{}, "get:Edit")
 
 	// 后台角色
-	beego.Router("/admin_role/list", &controllers.AdminController{}, "get:List")
+	beego.Router("/admin_role/list", &controllers.AdminRoleController{}, "get:List")
 	//beego.Router("/admin_role/detail?:role_id", &controllers.AdminController{}, "get:Detail")
 	//beego.Router("/admin_role/add", &controllers.AdminController{}, "get:Add")
 	//beego.Router("/admin_role/delete?:role_id", &controllers.AdminController{}, "get:Delete")
