@@ -27,3 +27,23 @@ func (aR *AdminRoleController) List() {
 	aR.ServeJSON()
 
 }
+
+func (aR *AdminRoleController) Add() {
+
+	adminRoleName := aR.GetString("admin_role_name", "")
+	adminPermissionId, _ := aR.GetInt("admin_permission_id", 0)
+	storeId, _ := aR.GetInt("store_id", 0)
+	id, err := models.AddAdminRole(adminRoleName, adminPermissionId, storeId)
+	res := map[string]interface{}{
+		"code":    200,
+		"message": "成功",
+		"data":    make(map[string]interface{}),
+	}
+	if err == nil && id > 0 {
+		aR.Data["json"] = res
+	} else {
+		res["code"] = 400
+		res["message"] = "失败"
+	}
+	aR.ServeJSON()
+}
