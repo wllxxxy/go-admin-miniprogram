@@ -1,9 +1,9 @@
 package models
 
 import (
+	"common/libs"
 	"github.com/beego/beego/v2/client/orm"
 	beego "github.com/beego/beego/v2/server/web"
-	"go-admin-miniprogram/server/common/libs"
 	"net/http"
 )
 
