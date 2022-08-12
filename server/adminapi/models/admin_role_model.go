@@ -1,7 +1,7 @@
 package models
 
 import (
-	"common/libs"
+	libs "common/libs"
 	"github.com/beego/beego/v2/client/orm"
 	beego "github.com/beego/beego/v2/server/web"
 	"net/http"
@@ -54,7 +54,7 @@ func GetAdminRoleList() (int64, []orm.Params, error) {
 
 func AddAdminRole(adminRoleName string, adminPermissionId int, storeId int) (int64, error) {
 	var r *http.Request
-	ip := RemoteIp(r)
+	ip := libs.RemoteIp(r)
 	//ip := libs.ClientPublicIP(r)
 	//if ip == ""{
 	//	ip = exnet.ClientIP(r)
