@@ -5,23 +5,25 @@ import (
 	"net/http"
 )
 
-func RemoteIp(req *http.Request) string {
-	remoteAddr := req.RemoteAddr
-	if ip := req.Header.Get("X-Real-Ip"); ip != "" {
-		remoteAddr = ip
-	} else if ip = req.Header.Get("X-Forwarded-For"); ip != "" {
-		remoteAddr = ip
+func RemoteIp(r *http.Request) string {
+	remoteIp := r.RemoteAddr
+
+	if ip := r.Header.Get("X-Real-IP"); ip != "" {
+		remoteIp = ip
+	} else if ip = r.Header.Get("X-Forwarded-For"); ip != "" {
+		remoteIp = ip
 	} else {
-		remoteAddr, _, _ = net.SplitHostPort(remoteAddr)
+		remoteIp, _, _ = net.SplitHostPort(remoteIp)
 	}
 
-	if remoteAddr == "::1" {
-		remoteAddr = "127.0.0.1"
+	//本地ip
+	if remoteIp == "::1" {
+		remoteIp = "127.0.0.1"
 	}
 
-	return remoteAddr
+	return remoteIp
+
 }
-
 
 //func ClientIP(r *http.Request) string {
 //	xForwardedFor := r.Header.Get("X-Forwarded-For")

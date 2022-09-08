@@ -1,7 +1,7 @@
 package main
 
 import (
-	_ "go-admin-miniprogram/server/common/routers"
+	_ "common/routers"
 
 	"github.com/astaxie/beego"
 )

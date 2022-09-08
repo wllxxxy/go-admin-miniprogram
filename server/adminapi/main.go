@@ -1,9 +1,8 @@
 package main
 
 import (
-	_ "adminapi/routers"
-
 	_ "adminapi/inits"
+	_ "adminapi/routers"
 	beego "github.com/beego/beego/v2/server/web"
 )
 

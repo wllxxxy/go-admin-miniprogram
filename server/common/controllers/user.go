@@ -1,7 +1,7 @@
 package controllers
 
 import (
-	"go-admin-miniprogram/server/common/models"
+	"common/models"
 	"encoding/json"
 
 	"github.com/astaxie/beego"
