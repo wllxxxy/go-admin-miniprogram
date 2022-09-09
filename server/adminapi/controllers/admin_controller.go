@@ -11,25 +11,19 @@ type AdminController struct {
 
 // 后台管理用户列表
 func (a *AdminController) List() {
-	//o := orm.NewOrm()
-	//var admin []models.Admin
-	//_, err := o.QueryTable("admin").OrderBy("-admin_id").All(&admin)
-	//
-	//var serve = make(map[string]interface{})
-	//
-	//if err != nil {
-	//	serve["code"] = "1"
-	//	serve["message"] = "查询失败"
-	//} else {
-	//	serve["code"] = "0"
-	//	serve["message"] = "查询成功"
-	//	serve["data"] = admin
+	//res := map[string]interface{}{
+	//	"code":    200,
+	//	"message": "成功",
+	//	"data":    make(map[string]interface{}),
 	//}
-	//a.Data["json"] = &serve
-	//defer a.ServeJSON()
-	//adminList := models.GetAdminList()
-	//a.Data["json"] = adminList
-	//a.ServeJSON()
+	//_, adminList, err := models.GetAdminList()
+	//
+	//if err == nil {
+	//	res["data"] = adminList
+	//}
+	//aR.Data["json"] = res
+	//aR.ServeJSON()
+
 }
 
 
