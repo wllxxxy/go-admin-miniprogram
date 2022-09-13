@@ -5,7 +5,7 @@ import (
 	_ "adminapi/routers"
 	beego "github.com/beego/beego/v2/server/web"
 )
-
+//测试文件
 //func dumpHttpFilter(ctx *context.Context) {
 //	method := ctx.Request.Method
 //	header := ctx.Request.URL
