@@ -1,8 +1,12 @@
 # MySQL 连接配置
 mysql:
   username : "root"
-  password : "root"
-  host : "192.168.204.1"
-  database : "admin"
+  password : "rootroot"
+  host : "127.0.0.1"
+  database : "go_admin_miniprogram"
   port : "3306"
-  prefix : ""
+  prefix : "gam_"
+
+Common:
+  UrlAllow:
+    - login

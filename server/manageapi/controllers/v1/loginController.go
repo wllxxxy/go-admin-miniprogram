@@ -1,11 +1,7 @@
 package v1
 
-import (
-	beego "github.com/beego/beego/v2/server/web"
-)
-
 type LoginController struct {
-	beego.Controller
+	BaseController
 }
 
 // Login 登陆

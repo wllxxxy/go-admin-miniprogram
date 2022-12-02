@@ -1,4 +1,4 @@
-// @APIVersion 1.0.0
+// Package routers @APIVersion 1.0.0
 // @Title beego Test API
 // @Description beego has a very cool tools to autogenerate documents for your API
 // @Contact astaxie@gmail.com
@@ -33,7 +33,7 @@ func init() {
 		beego.NSRouter("/logout", &v1.IndexController{}, "post:Logout"),
 	)
 
-	ns.Filter("before", middlewares.NewCrossDomainMiddleware(), middlewares.NewSignMiddleware())
+	ns.Filter("before", middlewares.NewCrossDomainMiddleware(), middlewares.NewSignMiddleware(), middlewares.NewAuthenticateMiddleware())
 
 	beego.AddNamespace(ns)
 }

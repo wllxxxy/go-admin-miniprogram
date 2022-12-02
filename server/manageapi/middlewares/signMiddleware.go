@@ -54,8 +54,6 @@ func NewSignMiddleware() web.FilterFunc {
 		if signature != Signature(ctx.Request.PostForm) {
 			responses.FailMsg(8004, ctx)
 		}
-
-		responses.Success(ctx)
 	}
 }
 

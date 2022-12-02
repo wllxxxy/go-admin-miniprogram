@@ -1,15 +1,15 @@
 package main
 
 import (
-	_ "manageapi/routers"
-
 	beego "github.com/beego/beego/v2/server/web"
+	_ "manageapi/bootstrap"
+	_ "manageapi/routers"
 )
 
 func main() {
-	if beego.BConfig.RunMode == "dev" {
-		beego.BConfig.WebConfig.DirectoryIndex = true
-		beego.BConfig.WebConfig.StaticDir["/swagger"] = "swagger"
-	}
+	//if beego.BConfig.RunMode == "dev" {
+	//	beego.BConfig.WebConfig.DirectoryIndex = true
+	//	beego.BConfig.WebConfig.StaticDir["/swagger"] = "swagger"
+	//}
 	beego.Run()
 }
